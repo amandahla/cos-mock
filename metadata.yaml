@@ -1,0 +1,19 @@
+# This file populates the Overview on Charmhub.
+# See https://juju.is/docs/sdk/metadata-reference for a checklist and guidance.
+
+# The charm package name, no spaces (required)
+# See https://juju.is/docs/sdk/naming#heading--naming-charms for guidance.
+name: cos-mock
+display-name: COS Mock
+summary: A very short one-line summary of the charm.
+description: Charm to be used in integration tests.
+assumes:
+  - k8s-api
+requires:
+  metrics-endpoint:
+    interface: prometheus_scrape
+  grafana-dashboard:
+    interface: grafana_dashboard
+peers:
+  grafana:
+    interface: grafana_peers
